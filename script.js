@@ -1,3 +1,6 @@
+import './hra_jakub.js'
+import './hra_martin.js'
+
 const hidePages = () => {
     $('.single_page').addClass('hidden')
 };
