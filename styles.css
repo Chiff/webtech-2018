@@ -6,3 +6,83 @@ body, html {
 .hidden {
     display: none;
 }
+
+/* game martin */
+
+.drop-target {
+    background-color: #29e;
+    border-color: #fff;
+}
+
+.drag-drop {
+    padding: 0;
+
+    color: #fff;
+    background-color: #29e;
+
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+
+    transition: background-color 0.3s;
+}
+
+
+.dropzone {
+    width: 62px;
+    height: 62px;
+    display: inline-block;
+    position: relative;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+
+    background-size: contain;
+    display: inline-block;
+
+    box-sizing: border-box;
+    padding: 19px;
+    z-index: 2;
+}
+
+
+.puzzle-holder {
+    height: auto;
+    width: 100%;
+    background: blue;
+}
+
+#outer-dropzone {
+    width: 248px;
+    height: 248px;
+    touch-action: none;
+    margin: 0 auto;
+    position: relative;
+    line-height: 0;
+}
+
+#outer-dropzone::after {
+    content: "";
+    background: url("img/puzzle_mato/pucle.jpg");
+    background-size: contain;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    width: 248px;
+    height: 248px;
+}
+
+#page_game_martin {
+    padding: 20px 0;
+}
+
+.dropped {
+    top:-19px;
+    left:-19px;
+    position: absolute;
+}

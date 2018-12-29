@@ -6,7 +6,7 @@ const hidePages = () => {
 };
 
 const showPage = (id) => {
-    console.warn('Page: ', id);
+    console.warn('Showing page: ', id);
 
     hidePages();
     $(id).removeClass('hidden');
