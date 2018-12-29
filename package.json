@@ -1,0 +1,8 @@
+{
+  "name": "webtech2018zadanie",
+  "version": "1.0.0",
+  "main": "script.js",
+  "author": "Martin Filo <martinxfilo@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
