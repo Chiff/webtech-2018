@@ -4,5 +4,9 @@
   "main": "script.js",
   "author": "Martin Filo <martinxfilo@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "interactjs": "^1.3.4",
+    "jquery": "^3.3.1"
+  }
 }
