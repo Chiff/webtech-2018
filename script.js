@@ -67,4 +67,6 @@ window.onhashchange = function (e) {
     editHistory(lastNElements);
 };
 
-window.h = history;
+
+/* kalendar */
+

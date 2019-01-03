@@ -1,4 +1,4 @@
-{
+export default {
   "02.01.": [
     "Abel",
     "Set"
