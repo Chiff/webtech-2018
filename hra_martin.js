@@ -1,16 +1,14 @@
-export default function () {
-    restart();
-}
-
 let puzzleDoneCounter = 0;
 
-const restart = () => {
+export const restart = () => {
     $('.puzzle-holder').empty();
     $('#outer-dropzone').empty();
-    $('.restart').addClass('hidden');
 
     createDropZones();
     createPuzzle();
+
+    endTimer();
+    $('.restart').addClass('hidden');
 
     puzzleDoneCounter = 0;
 

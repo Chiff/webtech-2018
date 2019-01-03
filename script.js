@@ -1,8 +1,9 @@
 import jakub from './hra_jakub.js'
-import martin from './hra_martin.js'
+import * as martin from './hra_martin.js'
 
 const hidePages = () => {
-    $('.single_page').addClass('hidden')
+    $('.single_page').addClass('hidden');
+    martin.restart();
 };
 
 const showPage = (id) => {
@@ -11,7 +12,7 @@ const showPage = (id) => {
     hidePages();
     $(id).removeClass('hidden');
 
-    if (id.includes('martin')) martin();
+    // if (id.includes('martin')) martin.restart();
     if (id.includes('jakub')) jakub()
 };
 
@@ -19,7 +20,7 @@ const showPage = (id) => {
     hidePages();
 
     if (window.location.href.includes("#"))
-        showPage('#' + window.location.href.split('#')[1])
+        showPage('#' + window.location.href.split('#')[1]);
     else
         showPage("#page_main")
 })();

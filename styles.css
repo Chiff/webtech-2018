@@ -46,7 +46,6 @@ body, html {
     z-index: 2;
 }
 
-
 .puzzle-holder {
     height: auto;
     width: 100%;
@@ -82,7 +81,13 @@ body, html {
 }
 
 .dropped {
-    top:-19px;
-    left:-19px;
+    top: -19px;
+    left: -19px;
     position: absolute;
+    z-index: -1;
+}
+
+/* fix pretoze tento diel ma zle rozmery */
+.puzzle-piece.piece-10.dropped {
+    left: -21px;
 }
