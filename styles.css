@@ -13,7 +13,7 @@ ul {
 }
 
 ul li::before {
-    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    content: "\0000BB";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: #fb8c00; /* Change the color */
     font-weight: bold; /* If you want it to be bold */
     display: inline-block; /* Needed to add space between the bullet and the text */
@@ -48,12 +48,17 @@ nav a:hover {
 
 .content-holder .pages {
     flex-grow: 1;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 121px);
 }
 
 .side {
     padding: 50px;
-    background: pink;
+    border-left: 2px solid #fb8c00;
+}
+
+#history {
+    border-bottom: 2px solid #fb8c00;
+    padding: 10px;
 }
 
 /**************/
@@ -242,24 +247,37 @@ table .true {
     width: 100%;
     height: 100%;
     text-align: center;
-
+    padding: 15px;
+    box-sizing: border-box;
 }
 .stlpce{
     display: block;
     flex-grow: 1;
-    min-width: 280px;
-    max-width: 25%;
+    flex-basis: 280px;
     border: 5px solid #fb8c00;
 
     padding-left: 20px;
     padding-right: 20px;
-    margin: 20px auto;
+    margin: 5px;
+    position: relative;
+}
+
+.stlpce p {
+    text-align: justify;
+}
+
+.stlpce a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
 }
 .stlpce.color-clanok1 {
     background-color: lightgreen;
 }
 .stlpce.color-clanok2 {
     background-color: #bcaaa4;
+    order: 1;
 }
 .stlpce.color-clanok3 {
     background-color: #fff59d;
