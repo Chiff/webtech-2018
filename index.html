@@ -5,6 +5,7 @@
     <title>Title</title>
     
     <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     
     <script src="vendor/interact.js"></script>
     <script src="vendor/jquery.js"></script>
@@ -15,14 +16,14 @@
     <a href="#page_main">Uvod</a>
     <a href="#page_game_martin">Hra Martin</a>
     <a href="#page_game_jakub">Hra Jakub</a>
-    <a href="#page_kontakt">Hra kontakt</a>
+    <a href="#page_kontakt">Kontakt</a>
 </nav>
 
-<div id="page_main" class="single_page">
+<div id="page_main" class="single_page hidden">
     page_main page
 </div>
 
-<div id="page_game_martin" class="single_page">
+<div id="page_game_martin" class="single_page hidden">
     <div id="outer-dropzone"></div>
     <div class="puzzle-holder"></div>
     <div class="counter"></div>
@@ -30,12 +31,77 @@
     <div class="button restart">Restart</div>
 </div>
 
-<div id="page_game_jakub" class="single_page">
+<div id="page_game_jakub" class="single_page hidden">
     page_game_jakub page
 </div>
 
-<div id="page_kontakt" class="single_page">
-    page_game_jakub page
+<div id="page_kontakt" class="single_page hidden">
+    <div class="contact-container">
+        <h1 class="mat-col-primary-light">Martin Filo</h1>
+        <ul>
+            <li>Email: <a href="mailto:xfilom@stuba.sk">xfilom@stuba.sk</a></li>
+            <li>Cvicenie: Piatok 11:00</li>
+        </ul>
+    </div>
+    <div class="contact-container">
+        <h1 class="mat-col-primary-light">Jakub Jadvis</h1>
+        <ul>
+            <li>Email: <a href="mailto:xjadvis@stuba.sk">xjadvis@stuba.sk</a></li>
+            <li>Cvicenie: Piatok 09s:00</li>
+        </ul>
+    </div>
+    
+    <table>
+        <thead>
+        <tr>
+            <td>Checklist</td>
+            <th>Martin Filo</th>
+            <th>Jakub Jadvis</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Návrh grafického dizajnu</th>
+            <td class="true">true</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <th>Responzívny dizajn</th>
+            <td class="true">true</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <th>Zobrazenie aktuálneho dátumu s meninami</th>
+            <td>false</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <th>Zobrazenie počítadla osobných prístupov</th>
+            <td>false</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <th>Zobrazenie histórie prehliadania</th>
+            <td>false</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <th>Text z troch článkov na Internete</th>
+            <td>false</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <th>Vypracovanie individuálnej úlohy</th>
+            <td class="true">true</td>
+            <td class="true">true</td>
+        </tr>
+        <tr>
+            <th>Kontakt na všetkých autorov</th>
+            <td class="true">true</td>
+            <td>false</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 <script src="script.js" type="module"></script>
