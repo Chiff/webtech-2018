@@ -32,10 +32,14 @@ nav {
 }
 nav a {
     text-decoration: none;
-    flex-grow: 1;
+    margin: 0 auto;
     text-align: center;
     color: black;
     font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
 }
 
 /**************/
@@ -163,21 +167,53 @@ nav a {
 /***********/
 /* Kontakt */
 /***********/
+.contacts, table {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts .contact-container {
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+table {
+    padding: 20px;
+}
+
+table th {
+    color: #00227b;
+    border: 2px solid #fb8c00;
+}
+
 tbody th {
     text-align: right;
 }
 
 thead td {
-    text-align: left;
+    text-align: right;
+    border: 2px solid #fb8c00;
+    font-weight: bold;
+    color: #fb8c00;
+    text-transform: uppercase;
 }
 
 th,td {
-    border: 1px solid grey;
+    border: 1px solid #fb8c00;
     margin: 0;
     padding: 10px;
     text-align: center;
+    border-radius: 5px;
 }
 
+tbody td {
+    color: red;
+}
 table .true {
-    background: #11990e;
+    color: green;
 }
