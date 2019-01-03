@@ -1,5 +1,6 @@
 import jakub from './hra_jakub.js'
 import * as martin from './hra_martin.js'
+import kalendar from './meniny.js'
 
 const pages = {
     '#page_main': 'Uvod',
