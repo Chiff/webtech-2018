@@ -43,6 +43,7 @@ const pages = {
 const editHistory = (lastNElements) => {
     const $nodeHistory = $('#history');
     $nodeHistory.removeClass('hidden');
+    $('.pages').removeClass('no-history');
     $nodeHistory.empty();
 
     for (let i = 0; i < lastNElements.length; i++) {

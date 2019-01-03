@@ -51,9 +51,27 @@ nav a:hover {
     min-height: calc(100vh - 121px);
 }
 
+.content-holder .pages.no-history {
+    min-height: calc(100vh - 80px);
+}
+
 .side {
-    padding: 50px;
+    padding: 25px;
     border-left: 2px solid #fb8c00;
+    width: 300px;
+    position: relative;
+}
+
+.side .visit-counter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.side .container-calendar{
+    height: calc(100% - 110px);
+    background: pink;
 }
 
 #history {
@@ -282,3 +300,4 @@ table .true {
 .stlpce.color-clanok3 {
     background-color: #fff59d;
 }
+
