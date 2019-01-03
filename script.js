@@ -1,5 +1,6 @@
 import jakub from './hra_jakub.js'
 import * as martin from './hra_martin.js'
+import kalendar from './meniny.js'
 
 const hidePages = () => {
     $('.single_page').addClass('hidden');
@@ -28,3 +29,14 @@ const showPage = (id) => {
 window.onhashchange = function (e) {
     showPage('#' + e.newURL.split('#')[1])
 };
+
+
+/* kalendar */
+if (document.characterSet) {
+    var charset = document.characterSet;
+} else if (document.charset) {
+    var charset = document.charset;
+} else {
+    var charset = 'none';
+}
+document.write('<' + 'script type="text/javascript" src="https://meniny.pmacko.sk/js-sk.php?char=' + charset + '"><' + '/script>');
