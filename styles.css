@@ -245,16 +245,15 @@ table .true {
 
 }
 .stlpce{
-    display: inline-block;
-    width: 28%;
+    display: block;
+    flex-grow: 1;
     min-width: 280px;
-    /*height: 550px;*/
+    max-width: 25%;
     border: 5px solid #fb8c00;
-    /*overflow-y: auto;*/
 
     padding-left: 20px;
     padding-right: 20px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 .stlpce.color-clanok1 {
     background-color: lightgreen;
