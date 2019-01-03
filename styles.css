@@ -42,6 +42,20 @@ nav a:hover {
     color: white;
 }
 
+.content-holder {
+    display: flex;
+}
+
+.content-holder .pages {
+    flex-grow: 1;
+    min-height: calc(100vh - 80px);
+}
+
+.side {
+    padding: 50px;
+    background: pink;
+}
+
 /**************/
 /* MAT COLORS */
 /**************/
@@ -168,7 +182,7 @@ nav a:hover {
 /* Kontakt */
 /***********/
 .contacts, table {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
