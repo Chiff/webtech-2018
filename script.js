@@ -63,4 +63,24 @@ window.onhashchange = function (e) {
 };
 
 /* kalendar */
+// window.a=kalendar
+window.getNameByDate = () => {
+    const inputDate = $('#calendar-date').val();
+    console.log(inputDate);
 
+    // 2019-05-09 - yyyyMMdd
+    // let dparsed = date.split('-') -> [2019, 05, 09]
+    // let den = dparsed[2], mesiac
+    // kalendar[den + '.' + mesiac + '.'] -> [meno, meno, meno,...]
+    let dparsed = inputDate.split('-');
+    let den = dparsed[2];
+    let mesiac = dparsed[1];
+    let dd = kalendar[den + '.' + mesiac + '.'];
+    console.log(dd);
+    $("#current-name").text(dd.toString())
+
+}
+window.getDateByName = () => {
+    const inputName = $('#calendar-name').val();
+    console.log(inputName)
+}
