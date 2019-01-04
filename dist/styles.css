@@ -1,0 +1,688 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style: none; /* Remove default bullets */
+}
+
+ul li::before {
+    content: "\0000BB"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #fb8c00; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+a {
+    color: #fb8c00;
+}
+
+nav {
+    display: flex;
+    padding: 30px 0;
+    background: #fb8c00;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: white;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.content-holder {
+    display: flex;
+}
+
+.content-holder .pages {
+    flex-grow: 1;
+    min-height: calc(100vh - 121px);
+    width: calc(100vw - 300px);
+}
+
+.content-holder .pages.no-history {
+    min-height: calc(100vh - 80px);
+}
+
+.side {
+    padding: 25px;
+    border-left: 2px solid #fb8c00;
+    width: 300px;
+    position: relative;
+    background: white;
+}
+
+.side .visit-counter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+}
+
+.side .container-calendar {
+    height: calc(80% - 110px);
+}
+
+#history {
+    border-bottom: 2px solid #fb8c00;
+    padding: 10px;
+}
+
+.button {
+    background-color: #fb8c00;
+    color: white;
+    border: 5px solid #fb8c00;
+    padding: 5px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -ms-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+}
+
+.name,
+.date,
+.operation {
+    font-size: 20px;
+    padding: 5px 12px;
+    border-bottom: 5px solid #fb8c00;
+    margin: 10px 2px;
+}
+
+#copy {
+    padding: 10px 5px;
+    text-align: right;
+    border-top: 2px solid #fb8c00;
+}
+
+.drop-hover {
+    position: relative;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.drop-hover:hover .drop-down {
+    display: block;
+}
+
+.drop-down {
+    background: white;
+    position: absolute;
+    border: 2px solid #fb8c00;
+    transform: translateX(-35%);
+    display: none;
+    z-index: 10;
+}
+
+.drop-down-level-2 div,
+.drop-down a {
+    display: block;
+    padding: 20px 40px;
+    width: 150px;
+    border-bottom: 1px solid #fb8c00;
+    text-align: center;
+}
+
+.drop-down a:hover {
+    color: #fb8c00;
+}
+
+.drop-down-level-2 {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    transform: translate(100%, 50%);
+    background: white;
+    border: 2px solid #fb8c00;
+    cursor: initial;
+    display: none;
+}
+
+div.drop-extend:hover .drop-down-level-2 {
+    display: block;
+}
+
+.drop-down-level-2 a {
+    display: block;
+    width: 150px;
+    border: none;
+    border-top: 1px solid #fb8c00;
+}
+
+a.disabled {
+    color: grey;
+}
+
+.side input,
+.side .button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.side input {
+    padding: 5px 10px;
+    border: 5px solid #fb8c00;
+}
+
+.side .button {
+    margin-top: -5px;
+    margin-bottom: 30px;
+    z-index: 2;
+}
+
+.side button:hover {
+    color: black;
+    background: white;
+}
+
+/**************/
+/* MAT COLORS */
+/**************/
+.mat-col-primary-light {
+    color: #00227b;
+}
+
+.mat-col-primary-dark {
+    color: white;
+}
+
+.mat-back-primary-light {
+    background: white;
+}
+
+.mat-back-primary-dark {
+    background: #00227b;
+}
+
+.mat-col-secondary-light {
+    color: #fb8c00;
+}
+
+.mat-col-secondary-dark {
+    color: black;
+}
+
+.mat-back-secondary-light {
+    background: white;
+}
+
+.mat-back-secondary-dark {
+    background: #fb8c00;
+}
+
+/***************/
+/* game Jakub  */
+/***************/
+#page_game_jakub {
+    min-width: 945px;
+}
+
+#page_game_jakub h1 {
+
+    text-align: center;
+    color: #0a294b;
+    text-shadow: 5px 5px 10px #666666;
+    font-stretch: condensed;
+    padding: 0px 200px 8px 200px;
+
+}
+
+#myDIV {
+    display: inline-flex;
+    margin-top: 50px;
+    padding-top: 50px;
+    margin-left: 50px;
+    border: 2px solid black;
+
+}
+
+#kostraImage {
+    position: relative;
+    border: 5px solid black;
+    margin-top: 60px;
+    margin-left: 100px;
+    float: left;
+}
+
+#kostraimg {
+    opacity: 0.2;
+}
+
+/************/
+/*StopWatch*/
+/***************/
+.controls {
+
+    margin-top: 100px;
+    padding-left: 100px;
+    font-size: 50px;
+    height: 100%;
+
+}
+
+.stopwatch {
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+#page_game_jakub .button {
+    color: black;
+    font-size: 30px;
+    margin: 10px 0;
+    text-decoration: none;
+    border: 3px solid orange;
+}
+
+#page_game_jakub .button:first-child {
+    margin-left: 0;
+}
+
+#page_game_jakub .button:last-child {
+    margin-right: 0;
+}
+
+#page_game_jakub .button:hover {
+    background-color: #ffc223;
+}
+
+.parent-hlava {
+    position: absolute;
+    left: 150px;
+    top: 46px;
+
+}
+
+.child-hlava {
+    position: absolute;
+    float: left;
+    width: 90px;
+    height: 90px;
+    top: -45px;
+    left: -26px;
+
+}
+
+.parent-trup {
+    position: absolute;
+    float: left;
+    left: 145px;
+    top: 214px;
+
+}
+
+.child-trup {
+    position: absolute;
+    float: left;
+    width: 142px;
+    height: 181px;
+    top: -135px;
+    left: -68px;
+}
+
+.parent-lava-k {
+    position: absolute;
+    float: left;
+    left: 50px;
+    top: 200px;
+
+}
+
+.child-lava-k {
+    position: absolute;
+    float: left;
+    width: 45px;
+    height: 170px;
+    top: -68px;
+    left: -8px;
+}
+
+.parent-lava-z {
+    position: absolute;
+    float: left;
+    left: 35px;
+    top: 356px;
+
+}
+
+.child-lava-z {
+    position: absolute;
+    float: left;
+    width: 65px;
+    height: 185px;
+    left: -22px;
+    top: -66px;
+}
+
+.parent-prava-k {
+    position: absolute;
+    float: left;
+    left: 245px;
+    top: 210px;
+
+}
+
+.child-prava-k {
+    position: absolute;
+    float: left;
+    width: 60px;
+    height: 160px;
+    top: -72px;
+    left: -14px;
+}
+
+.parent-prava-z {
+    position: absolute;
+    float: left;
+    left: 258px;
+    top: 350px;
+
+}
+
+.child-prava-z {
+    position: absolute;
+    float: left;
+    width: 50px;
+    height: 190px;
+    top: -60px;
+    left: -10px;
+}
+
+.parent-panva {
+    position: absolute;
+    float: left;
+    left: 150px;
+    top: 350px;
+
+}
+
+.child-panva {
+    position: absolute;
+    float: left;
+    width: 160px;
+    height: 250px;
+    top: -43px;
+    left: -70px;
+}
+
+.parent-prava-n {
+    position: absolute;
+    float: left;
+    left: 190px;
+    top: 650px;
+
+}
+
+.child-prava-n {
+    position: absolute;
+    float: left;
+    width: 70px;
+    height: 260px;
+    top: -97px;
+    left: -9px;
+}
+
+.parent-lava-n {
+    position: absolute;
+    float: left;
+    left: 100px;
+    top: 650px;
+
+}
+
+.child-lava-n {
+    position: absolute;
+    float: left;
+    width: 60px;
+    height: 260px;
+    top: -98px;
+    left: -7px;
+}
+
+#animacia {
+    width: 450px;
+    border: 2px solid #fb8c00;
+}
+
+/***************/
+/* game martin */
+/***************/
+.drop-target {
+    background-color: #fb8c00;
+}
+
+.drag-drop {
+    padding: 0;
+
+    background-color: #fb8c00;
+
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+
+    transition: background-color 0.3s;
+}
+
+.dropzone {
+    width: 62px;
+    height: 62px;
+    display: inline-block;
+    position: relative;
+}
+
+.puzzle-piece {
+    width: 100px;
+    height: 100px;
+
+    background-size: contain;
+    display: inline-block;
+
+    box-sizing: border-box;
+    padding: 19px;
+    z-index: 2;
+}
+
+.puzzle-piece.allowed {
+    opacity: .85;
+}
+
+.puzzle-holder {
+    height: auto;
+    width: 100%;
+    background: #fb8c00;
+}
+
+#outer-dropzone {
+    width: 248px;
+    height: 248px;
+    touch-action: none;
+    margin: 0 auto;
+    position: relative;
+    line-height: 0;
+}
+
+#outer-dropzone::after {
+    content: "";
+    background: url("img/puzzle_mato/pucle.jpg");
+    background-size: contain;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    width: 248px;
+    height: 248px;
+}
+
+.dropped {
+    top: -19px;
+    left: -19px;
+    position: absolute;
+    z-index: -1;
+}
+
+/* fix pretoze tento diel ma zle rozmery */
+.puzzle-piece.piece-10.dropped {
+    left: -21px;
+}
+
+.game-info {
+    display: flex;
+    border-bottom: 2px solid #fb8c00;
+}
+
+.game-info > * {
+    flex-grow: 1;
+}
+
+.game-info > *:first-child {
+    text-align: left;
+    padding: 20px;
+}
+
+div.button.restart {
+    margin: 10px 0;
+    text-align: center;
+}
+
+div.button.restart:hover {
+    color: black;
+    background: white;
+}
+
+.game-info > *:last-child {
+    text-align: right;
+    padding: 20px;
+}
+
+#page_game_martin img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/***********/
+/* Kontakt */
+/***********/
+.contacts, table {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts .contact-container {
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+
+table {
+    padding: 20px;
+}
+
+table th {
+    color: #00227b;
+    border: 2px solid #fb8c00;
+}
+
+tbody th {
+    text-align: right;
+}
+
+thead td {
+    text-align: right;
+    border: 2px solid #fb8c00;
+    font-weight: bold;
+    color: #fb8c00;
+    text-transform: uppercase;
+}
+
+th, td {
+    border: 1px solid #fb8c00;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+tbody td {
+    color: red;
+}
+
+table .true {
+    color: green;
+}
+
+/***************/
+/* Uvod */
+/***************/
+
+#stlpce {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.stlpce {
+    display: block;
+    flex-grow: 1;
+    flex-basis: 280px;
+    border: 5px solid #fb8c00;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 5px;
+    position: relative;
+}
+
+.stlpce p {
+    text-align: justify;
+}
+
+.stlpce a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.stlpce.color-clanok1 {
+    background-color: lightgreen;
+}
+
+.stlpce.color-clanok2 {
+    background-color: #bcaaa4;
+    order: 1;
+}
+
+.stlpce.color-clanok3 {
+    background-color: #fff59d;
+}
