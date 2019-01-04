@@ -79,7 +79,6 @@ nav a:hover {
 
 .side .container-calendar {
     height: calc(80% - 110px);
-    /*background: pink;*/
 }
 
 #history {
@@ -125,7 +124,6 @@ nav a:hover {
 .drop-hover:hover .drop-down {
     display: block;
 }
-
 
 .drop-down {
     background: white;
@@ -180,7 +178,6 @@ a.disabled {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    /*outline-color: rgba(0,0,0,0);*/
 }
 
 .side input {
@@ -218,7 +215,6 @@ a.disabled {
     background: #00227b;
 }
 
-
 .mat-col-secondary-light {
     color: #fb8c00;
 }
@@ -234,12 +230,14 @@ a.disabled {
 .mat-back-secondary-dark {
     background: #fb8c00;
 }
+
 /***************/
 /* game Jakub  */
 /***************/
-#page_game_jakub{
+#page_game_jakub {
     min-width: 945px;
 }
+
 #page_game_jakub h1 {
 
     text-align: center;
@@ -259,7 +257,6 @@ a.disabled {
 
 }
 
-
 #kostraImage {
     position: relative;
     border: 5px solid black;
@@ -267,10 +264,10 @@ a.disabled {
     margin-left: 100px;
     float: left;
 }
-#kostraimg{
+
+#kostraimg {
     opacity: 0.2;
 }
-
 
 /************/
 /*StopWatch*/
@@ -313,7 +310,6 @@ a.disabled {
     position: absolute;
     left: 150px;
     top: 46px;
-    /*border: 5px solid black;*/
 
 }
 
@@ -324,7 +320,7 @@ a.disabled {
     height: 90px;
     top: -45px;
     left: -26px;
-    background-color: #666666;
+
 }
 
 .parent-trup {
@@ -332,7 +328,6 @@ a.disabled {
     float: left;
     left: 145px;
     top: 214px;
-    /*border: 5px solid black;*/
 
 }
 
@@ -341,18 +336,15 @@ a.disabled {
     float: left;
     width: 142px;
     height: 181px;
-    top: -93px;
-    left: -61px;
-    /*background-color: #666666;*/
+    top: -135px;
+    left: -68px;
 }
 
 .parent-lava-k {
     position: absolute;
     float: left;
-
-    left: 170px;
-    top: 320px;
-    /*border: 5px solid black;*/
+    left: 50px;
+    top: 200px;
 
 }
 
@@ -362,35 +354,31 @@ a.disabled {
     width: 45px;
     height: 170px;
     top: -68px;
-    left: -12px;
-    /*background-color: #666666;*/
+    left: -8px;
 }
 
 .parent-lava-z {
     position: absolute;
     float: left;
-    left: 160px;
-    top: 480px;
-    /*border: 5px solid black;*/
+    left: 35px;
+    top: 356px;
 
 }
 
 .child-lava-z {
     position: absolute;
     float: left;
-    width: 60px;
-    height: 190px;
-    top: -68px;
-    left: -32px;
-    /*background-color: #666666;*/
+    width: 65px;
+    height: 185px;
+    left: -22px;
+    top: -66px;
 }
 
 .parent-prava-k {
     position: absolute;
     float: left;
-    left: 365px;
-    top: 320px;
-    /*border: 5px solid black;*/
+    left: 245px;
+    top: 210px;
 
 }
 
@@ -398,74 +386,67 @@ a.disabled {
     position: absolute;
     float: left;
     width: 60px;
-    height: 190px;
-    top: -65px;
-    left: -18px;
-    /*background-color: #666666;*/
+    height: 160px;
+    top: -72px;
+    left: -14px;
 }
+
 .parent-prava-z {
     position: absolute;
     float: left;
-    left: 378px;
-    top: 460px;
-    /*border: 5px solid black;*/
+    left: 258px;
+    top: 350px;
 
 }
 
 .child-prava-z {
     position: absolute;
     float: left;
-    width: 55px;
-    height: 200px;
-    top: -52px;
-    left: -15px;
-    /*background-color: #666666;*/
+    width: 50px;
+    height: 190px;
+    top: -60px;
+    left: -10px;
 }
+
 .parent-panva {
     position: absolute;
     float: left;
-    left: 220px;
-    top: 480px;
-    /*border: 5px solid black;*/
+    left: 150px;
+    top: 350px;
 
 }
 
 .child-panva {
     position: absolute;
     float: left;
-    width: 140px;
+    width: 160px;
     height: 250px;
-    top: -53px;
-    left: -25px;
-    /*background-color: #666666;*/
+    top: -43px;
+    left: -70px;
 }
+
 .parent-prava-n {
     position: absolute;
     float: left;
-    left: 290px;
-    top: 780px;
-    /*border: 5px solid black;*/
+    left: 190px;
+    top: 650px;
 
 }
 
 .child-prava-n {
     position: absolute;
     float: left;
-    width: 60px;
-    height: 250px;
-    top: -105px;
-    left: 5px;
-    /*background-color: #666666;*/
+    width: 70px;
+    height: 260px;
+    top: -97px;
+    left: -9px;
 }
-
-
 
 .parent-lava-n {
     position: absolute;
     float: left;
-    left: 200px;
-    top: 750px;
-    /*border: 5px solid black;*/
+    left: 100px;
+    top: 650px;
 
 }
 
@@ -473,14 +454,15 @@ a.disabled {
     position: absolute;
     float: left;
     width: 60px;
-    height: 250px;
-    top: -75px;
-    left: 8px;
-    /*background-color: #666666;*/
+    height: 260px;
+    top: -98px;
+    left: -7px;
 }
 
-
-
+#animacia {
+    width: 450px;
+    border: 2px solid #fb8c00;
+}
 
 /***************/
 /* game martin */
@@ -579,7 +561,7 @@ a.disabled {
     padding: 20px;
 }
 
-div.button.restart{
+div.button.restart {
     margin: 10px 0;
     text-align: center;
 }
@@ -599,6 +581,7 @@ div.button.restart:hover {
     width: 100%;
     height: auto;
 }
+
 /***********/
 /* Kontakt */
 /***********/
