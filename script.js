@@ -68,19 +68,53 @@ window.getNameByDate = () => {
     const inputDate = $('#calendar-date').val();
     console.log(inputDate);
 
-    // 2019-05-09 - yyyyMMdd
-    // let dparsed = date.split('-') -> [2019, 05, 09]
-    // let den = dparsed[2], mesiac
-    // kalendar[den + '.' + mesiac + '.'] -> [meno, meno, meno,...]
+    // osetri nespravny input (empty)
+
+    // premen nazvypremennych
     let dparsed = inputDate.split('-');
     let den = dparsed[2];
     let mesiac = dparsed[1];
     let dd = kalendar[den + '.' + mesiac + '.'];
     console.log(dd);
-    $("#current-name").text(dd.toString())
 
-}
+    // vypln chybove/uspesne hlasky
+    if (!dd) $("#current-name").text(' - ');
+    else
+        $("#current-name").text(dd.join(', '))
+
+
+    $("#current-date").text(inputDate)
+    $("#current-operation").text('Najdenie menin podla datumu')
+
+};
 window.getDateByName = () => {
     const inputName = $('#calendar-name').val();
-    console.log(inputName)
-}
+
+    if (!inputName) {
+        $("#current-name").text(' - ');
+        $("#current-date").text(' - ');
+        $("#current-operation").text('Musite zadat meno');
+        return;
+    }
+
+    const date = Object.keys(kalendar).map((item) => {
+        const itemLower = kalendar[item].map(e => e.toLowerCase());
+
+        if (itemLower.includes(inputName.toLowerCase())) return item;
+        return false
+    }).filter(e => e);
+
+    console.log(date)
+
+    if (!date || date.length < 1) {
+        $("#current-date").text(' - ');
+        $("#current-operation").text('Datum pre zadane meno nebol najdeny')
+    }
+    else {
+        $("#current-date").text(date.join(', '));
+        $("#current-operation").text('Najdenie datumu podla menin')
+    }
+
+    $("#current-name").text(inputName);
+
+};

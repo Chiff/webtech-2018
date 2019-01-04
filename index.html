@@ -115,8 +115,8 @@
                         využíva mikrofóny zachytávajúce zvuk, na ktorý vstavané reproduktory zareagujú tak, že do vnútra
                         pošlú fázovo obrátenú vlnu. Zvuk s opačnou frekvenciou síce budú nepremení na anechoickú komoru
                         (pozn. komora s nulovými či zápornými decibelmi), ale hluk petárd dokáže výrazne tlmiť. Lepší
-                        spánok má psovi dopriať aj pasívna izolácia z korku.<br><br>
-                    <h3>Postieľka pre deti napodobňujúca jazdu v aute</h3><br>
+                        spánok má psovi dopriať aj pasívna izolácia z korku.
+                    <h3>Postieľka pre deti napodobňujúca jazdu v aute</h3>
                     <p>
                         Ford v minulom roku predstavil aj technologickú novinku pre najmenšie deti. Vychádzal z toho, že
                         sa kojenci najrýchlejšie zaspávajú v aute, preto do postieľky integroval malé motory. Tie mali
@@ -218,13 +218,26 @@
             <input id="calendar-date" type="date">
             <input id="calendar-name" type="text">
             <label for="calendar-date">
-                <button onclick="getNameByDate()">Date</button>
+                <button onclick="getNameByDate()">getNameByDate</button>
             </label>
             <label for="calendar-name">
-                <button onclick="getDateByName()">Name</button>
+                <button onclick="getDateByName()">getDateByName</button>
             </label>
-
-            <span id="current-name"></span>
+    
+            <div class="name">
+                <span>Meno: </span>
+                <span id="current-name"></span>
+            </div>
+    
+            <div class="date">
+                <span>Datum: </span>
+                <span id="current-date"></span>
+            </div>
+    
+            <div class="operation">
+                <span>Operacia: </span>
+                <span id="current-operation"></span>
+            </div>
         </div>
         
         <div class="visit-counter">
