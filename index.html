@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    
+
     <link rel="stylesheet" href="styles.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-    
+
     <script src="vendor/interact.js"></script>
     <script src="vendor/jquery.js"></script>
     <script src="script.js" type="module"></script>
@@ -30,7 +30,7 @@
         <div id="page_main" class="single_page hidden">
             <div id="stlpce">
                 <div class="stlpce color-clanok1">
-                    
+
                     <h1>Čínska sonda Chang'e 4 pristála na odvrátenej strane Mesiaca</h1><br>
                     <h3>
                         Čínska sonda Čchang-e 4 pristála vo štvrtok na odvrátenej strane Mesiaca. Potvrdila to čínska
@@ -58,7 +58,7 @@
                     <br>
                 </div>
                 <div class="stlpce color-clanok2">
-                    
+
                     <h1>Atlantik prepláva v sude. Poháňať ho budú morské prúdy</h1><br>
                     <h3>Za tri mesiace chce francúzsky dôchodca Jean-Jacques Savin prekonať Atlantický oceán.</h3>
                     <p>
@@ -96,7 +96,7 @@
                     <br>
                 </div>
                 <div class="stlpce color-clanok3">
-                    
+
                     <h1>Ford vymyslel búdu pre psy s aktívnym potlačením hluku</h1><br>
                     <h3>
                         Psov už nebudú zo spánku rušiť ohňostroje, ani štekot psov v okolí. Ford vymyslel búdu, ktorá
@@ -131,7 +131,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div id="page_game_martin" class="single_page hidden">
             <div id="outer-dropzone"></div>
             <div class="puzzle-holder"></div>
@@ -139,11 +139,130 @@
             <div class="timer"></div>
             <div class="button restart">Restart</div>
         </div>
-        
+
         <div id="page_game_jakub" class="single_page hidden">
-            page_game_jakub page
+            <h1>
+                <strong>Poznáš dobre svoje telo? Vyskúšaj sa!</strong><br>
+            </h1>
+            <div id="kostraImage">
+                <img src="img/human-skeleton-with-bones_clipped_rev_10.png" width="320" alt="kostra">
+            </div>
+
+            <div id="myDIV">
+
+                <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag1" src="img/human-skeleton-with-bones_clipped_rev_1.png" draggable="true"
+                         ondragstart="drag(event)"
+                         width="70">
+                </div>
+                <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag2" src="img/human-skeleton-with-bones_clipped_rev_2.png" draggable="true"
+                         ondragstart="drag(event)"
+                         width="170">
+                </div>
+                <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag3" src="img/human-skeleton-with-bones_clipped_rev_3.png" draggable="true"
+                         ondragstart="drag(event)"
+                         width="45">
+                </div>
+                <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag4" src="img/human-skeleton-with-bones_clipped_rev_4.png" draggable="true"
+                         ondragstart="drag(event)"
+                         width="55">
+                </div>
+                <div id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag5" src="img/human-skeleton-with-bones_clipped_rev_5.png" draggable="true"
+                         ondragstart="drag(event)"
+                         width="45">
+                </div>
+                <div id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag6" src="img/human-skeleton-with-bones_clipped_rev_13.png" draggable="true"
+                         ondragstart="drag(event)"
+                         width="60">
+                </div>
+                <div id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag7" src="img/human-skeleton-with-bones_clipped_rev_6.png" draggable="true"
+                         ondragstart="drag(event)"
+                         width="160">
+                </div>
+                <div id="div8" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag8" src="img/human-skeleton-with-bones_clipped_rev_8.png" draggable="true"
+                         ondragstart="drag(event)"
+                         width="46">
+                </div>
+                <div id="div9" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag9" src="img/human-skeleton-with-bones_clipped_rev_7.png" draggable="true"
+                         ondragstart="drag(event)"
+                         width="44">
+                </div>
+
+            </div>
+
+
+            <div class="parent-hlava" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="child-hlava">
+                </div>
+            </div>
+
+
+            <div class="parent-trup" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="child-trup">
+                </div>
+            </div>
+
+
+            <div class="parent-lava-k" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="child-lava-k">
+                </div>
+            </div>
+
+
+            <div class="parent-lava-z" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="child-lava-z">
+                </div>
+            </div>
+
+
+            <div class="parent-prava-k" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="child-prava-k">
+                </div>
+            </div>
+
+
+            <div class="parent-prava-z" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="child-prava-z">
+                </div>
+            </div>
+
+
+            <div class="parent-panva" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="child-panva">
+                </div>
+            </div>
+
+
+            <div class="parent-prava-n" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="child-prava-n">
+                </div>
+            </div>
+
+
+            <div class="parent-lava-n" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="child-lava-n">
+                </div>
+            </div>
+
+            <div class="controls">
+
+                <a  class="button" onClick="stopwatch.start();">Start</a>
+                <a  class="button" onClick="stopwatch.stop();">Stop</a>
+                <a  class="button" onClick="stopwatch.restart();">Restart</a>
+                <div class="stopwatch"></div>
+            </div>
+
+
         </div>
-        
+
         <div id="page_kontakt" class="single_page hidden">
             <div class="contacts">
                 <div class="contact-container">
@@ -234,23 +353,23 @@
             <label for="calendar-name">
                 <button class="button" onclick="getDateByName()">Hľadaj dátum</button>
             </label>
-            
+
             <div class="name">
                 <span>Meno: </span>
                 <span id="current-name"></span>
             </div>
-            
+
             <div class="date">
                 <span>Dátum: </span>
                 <span id="current-date"></span>
             </div>
-            
+
             <div class="operation">
                 <span>Operácia: </span>
                 <span id="current-operation"></span>
             </div>
         </div>
-        
+
         <div class="visit-counter">
             <a href='http://www.freevisitorcounters.com'>on Freevisitorcounters.com</a>
             <script type='text/javascript'
