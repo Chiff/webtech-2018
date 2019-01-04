@@ -238,22 +238,19 @@ a.disabled {
 /* game martin */
 /***************/
 .drop-target {
-    background-color: #29e;
-    border-color: #fff;
+    background-color: #fb8c00;
 }
 
 .drag-drop {
     padding: 0;
 
-    color: #fff;
-    background-color: #29e;
+    background-color: #fb8c00;
 
     -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
 
     transition: background-color 0.3s;
 }
-
 
 .dropzone {
     width: 62px;
@@ -277,7 +274,7 @@ a.disabled {
 .puzzle-holder {
     height: auto;
     width: 100%;
-    background: blue;
+    background: #fb8c00;
 }
 
 #outer-dropzone {
@@ -304,10 +301,6 @@ a.disabled {
     height: 248px;
 }
 
-#page_game_martin {
-    padding: 20px 0;
-}
-
 .dropped {
     top: -19px;
     left: -19px;
@@ -320,6 +313,40 @@ a.disabled {
     left: -21px;
 }
 
+.game-info {
+    display: flex;
+    border-bottom: 2px solid #fb8c00;
+}
+
+.game-info > * {
+    flex-grow: 1;
+}
+
+.game-info > *:first-child {
+    text-align: left;
+    padding: 20px;
+}
+
+div.button.restart{
+    margin: 10px 0;
+    text-align: center;
+}
+
+div.button.restart:hover {
+    color: black;
+    background: white;
+}
+
+.game-info > *:last-child {
+    text-align: right;
+    padding: 20px;
+}
+
+#page_game_martin img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 /***********/
 /* Kontakt */
 /***********/
