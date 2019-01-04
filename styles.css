@@ -271,6 +271,10 @@ a.disabled {
     z-index: 2;
 }
 
+.puzzle-piece.allowed {
+    opacity: .85;
+}
+
 .puzzle-holder {
     height: auto;
     width: 100%;
