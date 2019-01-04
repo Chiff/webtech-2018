@@ -1,6 +1,5 @@
 import jakub from './hra_jakub.js'
 import * as martin from './hra_martin.js'
-import kalendar from './meniny.js'
 
 const hidePages = () => {
     $('.single_page').addClass('hidden');
@@ -18,6 +17,37 @@ const showPage = (id) => {
     if (id.includes('jakub')) jakub()
 };
 
+const kalendar = {};
+const loadXML = (fileName) => {
+    $.ajax({
+        type: 'GET',
+        url: fileName,
+        dataType: 'xml',
+        success: (xml) => {
+            $(xml).find('zaznam').each((i, j) => {
+                const den = $(j).find('den').text();
+                const meniny = $(j).find('SK').text();
+
+                kalendar[den] = meniny.split(', ')
+            });
+
+            // console.log(kalendar)
+        },
+        error: (...e) => {
+            console.log(e)
+        }
+    })
+};
+
+const fillGamesMenu = () => {
+    const $dropDown = $('.drop-down');
+
+    $dropDown.append($.parseHTML('<a href="#page_game_martin">Hra Martin</a>'));
+    $dropDown.append($.parseHTML('<a href="#page_game_jakub">Hra Jakub</a>'));
+    $dropDown.append($.parseHTML('<div class="drop-extend"><a>Tretí člen chýba ➤</a></div>'));
+    $('.drop-extend').append($.parseHTML('<div class="drop-down-level-2"><div>3. úroveň menu..</div><a class="disabled">Žiadne položky</a></div>'));
+};
+
 const history = [];
 
 (() => {
@@ -31,6 +61,8 @@ const history = [];
         history.push("#page_main");
     }
 
+    loadXML('./meniny.xml');
+    fillGamesMenu();
 })();
 
 const pages = {
@@ -65,25 +97,25 @@ window.onhashchange = function (e) {
 /* kalendar */
 window.getNameByDate = () => {
     const inputDate = $('#calendar-date').val();
-    console.log(inputDate);
 
     let dateParsed = inputDate.split('-');
     let day = dateParsed[2];
     let month = dateParsed[1];
-    let formatDate = kalendar[day + '.' + month + '.'];
-    console.log(formatDate);
+    let formatDate = kalendar[month + day + ''];
 
+    // console.log(month + '' + day);
+    // console.log(inputDate);
+    // console.log(formatDate);
 
     if (!formatDate) {
         $("#current-name").text(' - ');
         $("#current-date").text(' - ');
         $("#current-operation").text('Musíš si vybrať dátum aby si našiel meno.');
-        return;
-    }
-    else
-        $("#current-name").text(formatDate.join(', '))
-        $("#current-date").text(inputDate)
+    } else {
+        $("#current-name").text(formatDate.join(', '));
+        $("#current-date").text(day + '.' + month + '.');
         $("#current-operation").text('Hľadanie mena podľa dátumu.')
+    }
 
 };
 
@@ -98,23 +130,22 @@ window.getDateByName = () => {
     }
 
     const date = Object.keys(kalendar).map((item) => {
-        const itemLower = kalendar[item].map(e => e.toLowerCase());
-
-        if (itemLower.includes(inputName.toLowerCase())) return item;
+        // https://stackoverflow.com/questions/990904/remove-accents-diacritics-in-a-string-in-javascript
+        const itemNormal = kalendar[item].map(e => e.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ""));
+        const inputNormal = inputName.toLowerCase().replace(/[\u0300-\u036f]/g, "");
+        if (itemNormal.includes(inputNormal)) return item;
         return false
     }).filter(e => e);
 
-    console.log(date)
+    // console.log(date);
 
     if (!date || date.length < 1) {
         $("#current-date").text(' - ');
         $("#current-operation").text('Dátum pre zadané meno nebol nájdený.')
-    }
-    else {
-        $("#current-date").text(date.join(', '));
+    } else {
+        $("#current-date").text(date[0].slice(2) + '.' + date[0].slice(0, 2) + '.');
         $("#current-operation").text('Hľadanie dátumu podľa mena.')
     }
 
-    $("#current-name").text(inputName);
-
+    $("#current-name").text(kalendar[date]);
 };
