@@ -42,10 +42,27 @@ const loadXML = (fileName) => {
 const fillGamesMenu = () => {
     const $dropDown = $('.drop-down');
 
-    $dropDown.append($.parseHTML('<a href="#page_game_martin">Hra Martin</a>'));
-    $dropDown.append($.parseHTML('<a href="#page_game_jakub">Hra Jakub</a>'));
-    $dropDown.append($.parseHTML('<div class="drop-extend"><a>Tretí člen chýba ➤</a></div>'));
-    $('.drop-extend').append($.parseHTML('<div class="drop-down-level-2"><div>3. úroveň menu..</div><a class="disabled">Žiadne položky</a></div>'));
+    const menuItems = [
+        '<a href="#page_game_martin">Hra Martin</a>',
+        '<a href="#page_game_jakub">Hra Jakub</a>',
+        '<div class="drop-extend"><a>Tretí člen chýba ➤</a></div>'
+    ];
+
+    for(let item in menuItems) {
+        $dropDown.append($.parseHTML(menuItems[item]));
+    }
+
+    const $dropExtend = $('.drop-extend');
+    $dropExtend.append($.parseHTML('<div class="drop-down-level-2"></div>'));
+
+    const menuItemsLevel2 = [
+        '<div>3. úroveň menu..</div>',
+        '<a class="disabled">Žiadne položky</a>'
+    ];
+
+    for(let item in menuItemsLevel2) {
+        $('.drop-down-level-2').append($.parseHTML(menuItemsLevel2[item]));
+    }
 };
 
 const history = [];
@@ -66,7 +83,7 @@ const history = [];
 })();
 
 const pages = {
-    '#page_main': 'Uvod',
+    '#page_main': 'Úvod',
     '#page_game_martin': 'Hra Martin',
     '#page_game_jakub': 'Hra Jakub',
     '#page_kontakt': 'Kontakt'
@@ -147,5 +164,5 @@ window.getDateByName = () => {
         $("#current-operation").text('Hľadanie dátumu podľa mena.')
     }
 
-    $("#current-name").text(kalendar[date]);
+    $("#current-name").text(kalendar[date] || ' - ');
 };
