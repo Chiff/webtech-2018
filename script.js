@@ -101,7 +101,7 @@ window.getNameByDate = () => {
     let dateParsed = inputDate.split('-');
     let day = dateParsed[2];
     let month = dateParsed[1];
-    let formatDate = kalendar[month + day + ''];
+    let formatDate = kalendar[month + '' + day];
 
     // console.log(month + '' + day);
     // console.log(inputDate);
