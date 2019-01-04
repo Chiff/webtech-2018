@@ -174,7 +174,7 @@ a.disabled {
 }
 
 .side input,
-.side button {
+.side .button {
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -185,7 +185,7 @@ a.disabled {
     border: 5px solid #fb8c00;
 }
 
-.side button {
+.side .button {
     margin-top: -5px;
     margin-bottom: 30px;
     z-index: 2;
