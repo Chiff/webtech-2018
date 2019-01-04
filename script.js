@@ -1,4 +1,4 @@
-import jakub from './hra_jakub.js'
+import * as jakub from './hra_jakub.js'
 import * as martin from './hra_martin.js'
 
 const hidePages = () => {
@@ -14,8 +14,10 @@ const showPage = (id) => {
     $(id).removeClass('hidden');
 
     // if (id.includes('martin')) martin.restart();
-    if (id.includes('jakub')) jakub()
+    if (id.includes('jakub')) jakub.start()
 };
+
+window.showPage = showPage;
 
 const kalendar = {};
 const loadXML = (fileName) => {

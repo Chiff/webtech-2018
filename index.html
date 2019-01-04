@@ -149,7 +149,58 @@
                 <strong>Poznáš dobre svoje telo? Vyskúšaj sa!</strong><br>
             </h1>
             <div id="kostraImage">
-                <img src="img/human-skeleton-with-bones_clipped_rev_10.png" width="320" alt="kostra">
+                <img id="kostraimg" src="img/human-skeleton-with-bones_clipped_rev_10.png" width="320" alt="kostra">
+
+                <div class="parent-hlava" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="child-hlava">
+                    </div>
+                </div>
+                <div class="parent-trup" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="child-trup">
+                    </div>
+                </div>
+
+
+                <div class="parent-lava-k" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="child-lava-k">
+                    </div>
+                </div>
+
+
+                <div class="parent-lava-z" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="child-lava-z">
+                    </div>
+                </div>
+
+
+                <div class="parent-prava-k" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="child-prava-k">
+                    </div>
+                </div>
+
+
+                <div class="parent-prava-z" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="child-prava-z">
+                    </div>
+                </div>
+
+
+                <div class="parent-panva" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="child-panva">
+                    </div>
+                </div>
+
+
+                <div class="parent-prava-n" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="child-prava-n">
+                    </div>
+                </div>
+
+
+                <div class="parent-lava-n" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div class="child-lava-n">
+                    </div>
+                </div>
             </div>
 
             <div id="myDIV">
@@ -202,66 +253,14 @@
 
             </div>
 
-
-            <div class="parent-hlava" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="child-hlava">
-                </div>
-            </div>
-
-
-            <div class="parent-trup" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="child-trup">
-                </div>
-            </div>
-
-
-            <div class="parent-lava-k" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="child-lava-k">
-                </div>
-            </div>
-
-
-            <div class="parent-lava-z" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="child-lava-z">
-                </div>
-            </div>
-
-
-            <div class="parent-prava-k" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="child-prava-k">
-                </div>
-            </div>
-
-
-            <div class="parent-prava-z" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="child-prava-z">
-                </div>
-            </div>
-
-
-            <div class="parent-panva" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="child-panva">
-                </div>
-            </div>
-
-
-            <div class="parent-prava-n" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="child-prava-n">
-                </div>
-            </div>
-
-
-            <div class="parent-lava-n" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="child-lava-n">
-                </div>
-            </div>
-
             <div class="controls">
 
                 <a  class="button" onClick="stopwatch.start();">Start</a>
                 <a  class="button" onClick="stopwatch.stop();">Stop</a>
-                <a  class="button" onClick="stopwatch.restart();">Restart</a>
+                <a  class="button" onClick="showPage('#page_game_jakub'); stopwatch.restart();">Restart</a>
                 <div class="stopwatch"></div>
+
+                <div class="eng-game hidden">Hra skoncena! Stlac restart/start</div>
             </div>
 
 

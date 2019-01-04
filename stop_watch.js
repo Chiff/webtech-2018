@@ -20,6 +20,7 @@ export default class Stopwatch {
             this.running = true;
             requestAnimationFrame(this.step.bind(this));
         }
+        $('.eng-game').addClass('hidden')
     }
 
     stop() {
@@ -33,6 +34,7 @@ export default class Stopwatch {
         this.times = [0, 0, 0];
         this.print();
 
+        $('.eng-game').addClass('hidden')
     }
 
     step(timestamp) {
