@@ -63,37 +63,37 @@ window.onhashchange = function (e) {
 };
 
 /* kalendar */
-// window.a=kalendar
 window.getNameByDate = () => {
     const inputDate = $('#calendar-date').val();
     console.log(inputDate);
 
-    // osetri nespravny input (empty)
+    let dateParsed = inputDate.split('-');
+    let day = dateParsed[2];
+    let month = dateParsed[1];
+    let formatDate = kalendar[day + '.' + month + '.'];
+    console.log(formatDate);
 
-    // premen nazvypremennych
-    let dparsed = inputDate.split('-');
-    let den = dparsed[2];
-    let mesiac = dparsed[1];
-    let dd = kalendar[den + '.' + mesiac + '.'];
-    console.log(dd);
 
-    // vypln chybove/uspesne hlasky
-    if (!dd) $("#current-name").text(' - ');
+    if (!formatDate) {
+        $("#current-name").text(' - ');
+        $("#current-date").text(' - ');
+        $("#current-operation").text('Musíš si vybrať dátum aby si našiel meno.');
+        return;
+    }
     else
-        $("#current-name").text(dd.join(', '))
-
-
-    $("#current-date").text(inputDate)
-    $("#current-operation").text('Najdenie menin podla datumu')
+        $("#current-name").text(formatDate.join(', '))
+        $("#current-date").text(inputDate)
+        $("#current-operation").text('Hľadanie mena podľa dátumu.')
 
 };
+
 window.getDateByName = () => {
     const inputName = $('#calendar-name').val();
 
     if (!inputName) {
         $("#current-name").text(' - ');
         $("#current-date").text(' - ');
-        $("#current-operation").text('Musite zadat meno');
+        $("#current-operation").text('Musíš zadať meno aby si zistil dátum menín.');
         return;
     }
 
@@ -108,11 +108,11 @@ window.getDateByName = () => {
 
     if (!date || date.length < 1) {
         $("#current-date").text(' - ');
-        $("#current-operation").text('Datum pre zadane meno nebol najdeny')
+        $("#current-operation").text('Dátum pre zadané meno nebol nájdený.')
     }
     else {
         $("#current-date").text(date.join(', '));
-        $("#current-operation").text('Najdenie datumu podla menin')
+        $("#current-operation").text('Hľadanie dátumu podľa mena.')
     }
 
     $("#current-name").text(inputName);

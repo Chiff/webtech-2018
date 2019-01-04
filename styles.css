@@ -76,8 +76,8 @@ nav a:hover {
 }
 
 .side .container-calendar{
-    height: calc(100% - 110px);
-    background: pink;
+    height: calc(80% - 110px);
+    /*background: pink;*/
 }
 
 #history {
@@ -306,4 +306,34 @@ table .true {
 .stlpce.color-clanok3 {
     background-color: #fff59d;
 }
-
+.button{
+    background-color: #ffb74d;
+    color: black;
+    border: 3px solid #fb8c00;
+    padding: 5px 12px;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+.name{
+    font-size: 20px;
+    padding: 5px 12px;
+    border: 5px solid #fb8c00;
+    margin: 2px 2px;
+}
+.date{
+    font-size: 20px;
+    padding: 5px 12px;
+    border: 5px solid #fb8c00;
+    margin: 2px 2px;
+}
+.operation{
+    font-size: 20px;
+    padding: 5px 12px;
+    border: 5px solid #fb8c00;
+    margin: 2px 2px;
+}
+#copy{
+    float: right;
+}

@@ -397,8 +397,7 @@ export default {
     "Zigmund"
   ],
   "03.05.": [
-    "Desana",
-    "Denis"
+    "Timea",
   ],
   "04.05.": [
     "Florian"
@@ -1008,6 +1007,10 @@ export default {
   "31.10.": [
     "Volfgang"
   ],
+    "01.11.": [
+        "Denis",
+        "Denisa"
+    ],
   "02.11.": [
     "Vekoslav"
   ],
@@ -1058,8 +1061,7 @@ export default {
     "Agneza"
   ],
   "17.11.": [
-    "Dioniz",
-    "Sebastian"
+    "Klaudia"
   ],
   "18.11.": [
     "Oto"
